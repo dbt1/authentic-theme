@@ -883,10 +883,19 @@ sub nav_list_combined_menu
                     $icon = '<i class="fa fa-fw fa2 fa2-maillist"></i>';
                 } elsif ($link =~ /\/virtual-server\/list_databases\.cgi/) {
                     $icon = '<i class="fa fa-fw fa-database"></i>';
-                } elsif ($link =~ /\/virtual-server\/list_scripts\.cgi/ ||
-                         $link =~ /\/server-manager\/mass_update_form\.cgi/)
+                } elsif ($link =~ /\/server-manager\/mass_update_form\.cgi/)
                 {
                     $icon = '<i class="fa fa-fw fa-update scaled1"></i>';
+                } elsif ($link =~ /\/virtual-server\/list_scripts\.cgi/)
+                {
+                    $icon = '<i class="fa-fw fa-kit fa-stacked-cubes fa-1_15x margined-left--4_5 margined-right--1"></i>';
+                } elsif ($link =~ /\/virtualmin-containers/) {
+                    if ($link =~ /list_containers.cgi/) {
+                        $icon = '<i class="fa-kit fa-container fa-1_15x margined-left--4 margined-right--0"></i>';
+                    } else {
+                        $icon = '<i class="fa-kit fa-containers-explorer fa-1_15x margined-left--5 margined-right-1"></i>';
+                    }
+
                 } elsif ($link =~ /\/filemin\/index\.cgi/) {
                     $icon = '<i class="fa fa-fw fa-file-manager scaled2"></i>';
 
