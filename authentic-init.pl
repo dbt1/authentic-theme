@@ -1168,9 +1168,6 @@ sub get_button_style
             $class = "grey ";
             $icon = "lock fa-1_15x margined-left--2";
         }
-    } elsif (string_contains($keys, "index_nftables_apply")) {
-        $class = "success ";
-        $icon  = "refresh";
     } elsif (string_contains($keys, "index_ruleset_active")) {
         $class = "primary ";
         $icon  = "list";
@@ -1180,6 +1177,9 @@ sub get_button_style
     } elsif (string_contains($keys, "index_edit_manual")) {
         $class = "warning ";
         $icon = " fa2 fa2-code fa-1_10x margined-top-05";
+    } elsif (string_contains($keys, "index_bootup")) {
+        $class = "success ";
+        $icon = "toggle-switch-off fa-1_25x";
     } elsif (string_contains($keys, "user_createover")) {
         $class = "warning ";
         $icon  = "user-switch fa-1_10x";
