@@ -9,7 +9,7 @@
 
 use strict;
 
-our (%in, %text, $cwd, $path);
+our (%access, %in, %text, $cwd, $path);
 
 require($ENV{'THEME_ROOT'}."/extensions/file-manager/file-manager-lib.pl");
 
@@ -38,13 +38,20 @@ else {
 	else {
 		my $success;
 		my @st = stat($cwd);
+		my ($address_mode, $allowed_addresses);
+		if (defined(&check_download_address)) {
+			$address_mode = $access{'download_address_mode'};
+			$allowed_addresses = $access{'download_allowed_addresses'};
+			}
 		if ($ssl == 0 || $ssl == 1) {
 			http_download($host, $port, $page, $full, undef, undef, $ssl,
-				$in{'username'}, $in{'password'});
+				$in{'username'}, $in{'password'}, undef, undef, undef,
+				undef, undef, $address_mode, $allowed_addresses);
 			}
 		else {
 			ftp_download($host, $page, $full, undef, undef,
-				$in{'username'}, $in{'password'}, $port);
+				$in{'username'}, $in{'password'}, $port, undef, undef,
+				$address_mode, $allowed_addresses);
 			}
 		set_ownership_permissions($st[4], $st[5], undef, $full);
 		@st = stat($cwd);
