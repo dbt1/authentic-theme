@@ -38,20 +38,21 @@ else {
 	else {
 		my $success;
 		my @st = stat($cwd);
-		my ($address_mode, $allowed_addresses);
-		if (defined(&check_download_address)) {
-			$address_mode = $access{'download_address_mode'};
-			$allowed_addresses = $access{'download_allowed_addresses'};
+		my $callbacks;
+		if (defined(&get_download_address_callback)) {
+			$callbacks = {
+				'address_callback' => get_download_address_callback(
+					$access{'download_address_mode'} || 'public',
+					$access{'download_allowed_addresses'}),
+				};
 			}
 		if ($ssl == 0 || $ssl == 1) {
-			http_download($host, $port, $page, $full, undef, undef, $ssl,
-				$in{'username'}, $in{'password'}, undef, undef, undef,
-				undef, undef, $address_mode, $allowed_addresses);
+			http_download($host, $port, $page, $full, undef, $callbacks,
+				$ssl, $in{'username'}, $in{'password'});
 			}
 		else {
-			ftp_download($host, $page, $full, undef, undef,
-				$in{'username'}, $in{'password'}, $port, undef, undef,
-				$address_mode, $allowed_addresses);
+			ftp_download($host, $page, $full, undef, $callbacks,
+				$in{'username'}, $in{'password'}, $port);
 			}
 		set_ownership_permissions($st[4], $st[5], undef, $full);
 		@st = stat($cwd);
