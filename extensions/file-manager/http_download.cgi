@@ -9,7 +9,7 @@
 
 use strict;
 
-our (%access, %in, %text, $cwd, $path);
+our (%access, %global_access, %in, %text, $cwd, $path);
 
 require($ENV{'THEME_ROOT'}."/extensions/file-manager/file-manager-lib.pl");
 
@@ -38,20 +38,27 @@ else {
 	else {
 		my $success;
 		my @st = stat($cwd);
-		my $callbacks;
+		my $download_callback;
 		if (defined(&get_download_address_callback)) {
-			$callbacks = {
-				'address_callback' => get_download_address_callback(
-					$access{'download_address_mode'} || 'public',
-					$access{'download_allowed_addresses'}),
+			my $address_checker = get_download_address_callback(
+				$global_access{'download_address_mode'},
+				$global_access{'download_allowed_addresses'});
+			$download_callback = sub {
+				if ($_[0] == 7 && defined($_[1]) && $address_checker) {
+					my $address_error = &$address_checker(
+						$host, [ $_[1] ]);
+					print_error(html_escape($address_error))
+						if ($address_error);
+					}
 				};
 			}
 		if ($ssl == 0 || $ssl == 1) {
-			http_download($host, $port, $page, $full, undef, $callbacks,
+			http_download($host, $port, $page, $full, undef,
+				$download_callback,
 				$ssl, $in{'username'}, $in{'password'});
 			}
 		else {
-			ftp_download($host, $page, $full, undef, $callbacks,
+			ftp_download($host, $page, $full, undef, $download_callback,
 				$in{'username'}, $in{'password'}, $port);
 			}
 		set_ownership_permissions($st[4], $st[5], undef, $full);
