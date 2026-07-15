@@ -1,6 +1,7 @@
 ## Changelog
 
-#### Version 26.50.3 (July 12, 2026)
+#### Version 26.50.3 (July 16, 2026)
+* Fix inconsistent gaps around rounded UI elements
 * Fix CPU usage values exceeding 100% in the dashboard
 * Fix File Manager remote downloads to respect download address restrictions
 * Fix spacing in the login page welcome message
