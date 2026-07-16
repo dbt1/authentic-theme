@@ -193,7 +193,9 @@ sub theme_footer
             $url = $url . "/"             if ($url =~ /[^\/]$/ && $url !~ /.cgi/ && $url !~ /javascript:history/ && $url !~ /[&?]/);
             print
 "<a style='margin-bottom: 10px;' class='btn btn-primary btn-lg page_footer_submit' href=\"$url\"><i class='fa fa-fw fa-arrow-left'>&nbsp;</i> <span>",
-              &text('main_return', $_[$i + 1]), "</span></a>&nbsp;&nbsp;\n";
+              &text('main_return', $_[$i + 1]), "</span></a>".
+                &ui_tag('span', undef,
+                    { style => 'display: inline-block; width: 4px' })."\n";
         }
     }
 
