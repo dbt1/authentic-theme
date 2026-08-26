@@ -1059,10 +1059,14 @@ const mail = (function() {
                             form_data = $form.serialize(),
                             $form_textarea = $(rs).find('textarea[name="body"]'),
                             toolbar_mode = $form_textarea.data('html-mode'),
-                            signature = $.trim(_.plugin.quote_escape($form_textarea.text()));
+                            // Raw signature is used as HTML body as is, while the
+                            // quote-escaped copy is safe for attribute interpolation
+                            signature_raw = $.trim($form_textarea.text()),
+                            signature = _.plugin.quote_escape(signature_raw);
 
                         if  (config.d.u.html_edit == 2 && signature) {
                             signature = `${$$.$.template.html.tags.br.repeat(2) + signature}`;
+                            signature_raw = `${$$.$.template.html.tags.br.repeat(2) + signature_raw}`;
                         }
                             
                         if (form_data) {
@@ -1246,6 +1250,13 @@ const mail = (function() {
                                         Quill.register(qs, true);
                                         qf.whitelist = ["monospace"];
                                         Quill.register(qf, true);
+
+                                        // Quill: register signature class attributor, so signature blocks
+                                        // keep their marking class across editor round trips
+                                        const qp = Quill.import('parchment');
+                                        Quill.register(new qp.Attributor.Class('signature', 'x-signature', {
+                                            scope: qp.Scope.BLOCK
+                                        }), true);
 
                                         // Redefine the actual target
                                         target = target[0];
@@ -2303,7 +2314,7 @@ const mail = (function() {
                                 bcc: element.input('bcc', data.visible),
                                 subject: element.input('subject', data.visible),
                                 attachments: element.input(classes.form.name.tattach, data.visible, false, true),
-                                body: types.new == 1 ? signature : data.visible.body,
+                                body: quill_signature_marks(types.new == 1 ? signature_raw : data.visible.body),
                                 signature: signature,
                                 toolbar_mode: toolbar_mode
                             })
