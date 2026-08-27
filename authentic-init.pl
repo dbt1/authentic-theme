@@ -927,6 +927,14 @@ sub init_vars
 
     our $xnav = "xnavigation=1";
 
+    # Prevent browsers from reusing heuristically cached full page responses,
+    # as they embed one-time state, like the on-load target page stored on
+    # the server. For example, when hitting the back button after a full page
+    # reload, a cached root page would carry a stale target, landing the user
+    # back on the current page instead of the previous one
+    our $pragma_no_cache;
+    $pragma_no_cache = 1 if (!http_x_request());
+
     our %gaccess = &get_module_acl();
     our $title   = &get_html_framed_title();
     our %cookies = get_cookies();
