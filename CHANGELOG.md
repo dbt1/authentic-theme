@@ -1,4 +1,8 @@
 ## Changelog
+#### Version 26.61 (September, 2026)
+* Add support for HTML signatures in Usermin
+* Fix data tables and their filter to be restored fully functional on history back navigation
+* Fix history back navigation after a full page reload
 
 #### Version 26.60 (August 17, 2026)
 * Fix change detection and submission for forms using grouped bottom action buttons
