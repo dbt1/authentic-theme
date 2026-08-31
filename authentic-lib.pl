@@ -689,7 +689,6 @@ sub get_sysinfo_vars
         $package_message,
         $csf_title,
         $csf_data,
-        $csf_remote_version,
         $authentic_remote_version,
         $local_motd);
 
@@ -899,7 +898,7 @@ sub get_sysinfo_vars
         }
 
         # Load ConfigServer Security & Firewall lib if available
-        ($csf_title, $csf_data, $csf_remote_version) = lib_csf_control('strings');
+        ($csf_title, $csf_data) = lib_csf_control('strings');
 
         #System time
         my ($_time);
@@ -1149,7 +1148,6 @@ sub get_sysinfo_vars
             $package_message,
             $csf_title,
             $csf_data,
-            $csf_remote_version,
             $authentic_remote_version,
             $local_motd);
 
@@ -1786,7 +1784,6 @@ sub clear_theme_cache
         unlink_file("$theme_var_dir/combined-system-info-$remote_user");
         unlink_file("$theme_var_dir/version-theme-stable");
         unlink_file("$theme_var_dir/version-theme-development");
-        unlink_file("$theme_var_dir/version-csf-stable");
         unlink_file("$theme_var_dir/software-latest");
         unlink_file("$theme_var_dir/software+latest");
 

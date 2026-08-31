@@ -115,8 +115,6 @@ theme_xhred_filemanager_successful_file_creation=Soubor <tt>%value</tt> byl úsp
 theme_xhred_notifications_packages_updates=Aktualizace balíčků
 theme_xhred_notifications_theme_update=Aktualizace motivu
 theme_xhred_notifications_theme_update_message=K dispozici je nová verze <em>%v</em> <strong>Authentic Theme</strong>. Prosím aktualizujte.
-theme_xhred_notifications_firewall_update=Aktualizace Firewallu
-theme_xhred_notifications_firewall_update_message=K dispozici je nová verze <em>%v</em> <strong>ConfigServer Server Security and Firewall</strong>. Prosím aktualizujte.
 
 theme_xhred_notifications_firewall_danger=Firewall Nebezpečí
 theme_xhred_notifications_firewall_danger_message=Zdá se, že <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">neběží</i> nebo byl zastaven! Nenechávejte server vystavený, zkontrolujte nastavení brány firewall (%v)

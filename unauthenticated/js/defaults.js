@@ -184,10 +184,6 @@ var
     config_portable_notifications_self = true,
 
     // ConfigServer Security & Firewall related
-    settings_sysinfo_csf_updates = true,
-    settings_csf_download_domain_privileged = 'download.configserver.com',
-    settings_csf_download_port_privileged = 443,
-    settings_csf_download_path_privileged = '/csf/version.txt',
     settings_sysinfo_csf_temp_list_privileged = true,
 
     // File Manager related

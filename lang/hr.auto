@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=Datoteka <tt>%value</tt> je usp
 theme_xhred_notifications_packages_updates=Ažuriranje paketa
 theme_xhred_notifications_theme_update=Ažuriranje teme
 theme_xhred_notifications_theme_update_message=Dostupna je nova verzija <em>%v</em> <strong>Authentic Theme</strong>. Molimo ažurirajte.
-theme_xhred_notifications_firewall_update=Ažuriranje vatrozida
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Opasnost od vatrozida
 theme_xhred_notifications_firewall_danger_message=Čini se da <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">ne radi</i> ili je zaustavljen! Ne ostavljajte poslužitelj izložen, provjerite postavke vatrozida (%v)

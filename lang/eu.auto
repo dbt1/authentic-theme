@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=<tt>%value</tt> fitxategia beha
 theme_xhred_notifications_packages_updates=Paketeak eguneratzea
 theme_xhred_notifications_theme_update=Gaiaren eguneratzea
 theme_xhred_notifications_theme_update_message=<strong>Authentic Theme</strong> <em>%v</em> bertsio berria eskuragarri dago. Eguneratu mesedez.
-theme_xhred_notifications_firewall_update=Firewall eguneratzea
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Suhiltzaileen arriskua
 theme_xhred_notifications_firewall_danger_message=Badirudi <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">ez dagoela exekutatzen</i> edo gelditu egin dela! Ez utzi zerbitzaria esposatuta, egiaztatu suebakiaren ezarpenak (%v)

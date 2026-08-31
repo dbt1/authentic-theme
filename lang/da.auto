@@ -167,8 +167,6 @@ theme_xhred_filemanager_successful_file_creation=Filen <tt>%value</tt> blev opre
 theme_xhred_notifications_packages_updates=Opdatering af pakker
 theme_xhred_notifications_theme_update=Temaopdatering
 theme_xhred_notifications_theme_update_message=En ny version <em>%v</em> af <strong>Authentic Theme</strong> er tilgængelig. Vær sød at opdatere.
-theme_xhred_notifications_firewall_update=Firewall-opdatering
-theme_xhred_notifications_firewall_update_message=En ny version <em>%v</em> af <strong>ConfigServer Server Security and Firewall</strong> er tilgængelig. Vær sød at opdatere.
 
 theme_xhred_notifications_firewall_danger=Firewall-fare
 theme_xhred_notifications_firewall_danger_message=Det ser ud til, at <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">ikke kører</i> eller er blevet stoppet! Lad ikke din server være eksponeret, se efter firewallindstillingerne (%v)

@@ -255,8 +255,6 @@ theme_xhred_filemanager_successful_file_creation=File <tt>%value</tt> was create
 theme_xhred_notifications_packages_updates=Packages Update
 theme_xhred_notifications_theme_update=Theme Update
 theme_xhred_notifications_theme_update_message=A new version <em>%v</em> of <strong>Authentic Theme</strong> is available. Please update.
-theme_xhred_notifications_firewall_update=Firewall Update
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Firewall Danger
 theme_xhred_notifications_firewall_danger_message=It appears that <strong>ConfigServer Server Security and Firewall</strong> is <i class="badge badge-danger">not running</i> or has been stopped! Don't leave your server exposed, check for the firewall settings (%v)

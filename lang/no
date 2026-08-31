@@ -215,8 +215,6 @@ theme_xhred_filemanager_successful_compression=Komprimering er fullført
 theme_xhred_notifications_packages_updates=Pakker oppdater
 theme_xhred_notifications_theme_update=Tema Oppdater
 theme_xhred_notifications_theme_update_message=En ny versjon <em>%v</em> av <strong>Authentic Tema</strong> er tilgjengelig. Vennligst oppdater.
-theme_xhred_notifications_firewall_update=Brannmur Oppdater
-theme_xhred_notifications_firewall_update_message=En ny versjon <em>%v</em> av <strong>ConfigServer Server Security and Firewall</strong> er tilgjengelig. Vennligst oppdater.
 
 theme_xhred_notifications_firewall_danger=Brannmur Fare
 theme_xhred_notifications_firewall_danger_message=Det ser ut til at <strong>ConfigServer Server Security and Firewall</strong> <span class="badge badge-danger">ikke kjører</span> eller er stoppet. Ikke la din tjener være utsatt, sjekk brannmurinnstillingene (%v)

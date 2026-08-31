@@ -210,8 +210,6 @@ theme_xhred_filemanager_successful_compression=圧縮は正常に終了しまし
 theme_xhred_notifications_packages_updates=パッケージの更新
 theme_xhred_notifications_theme_update=テーマの更新
 theme_xhred_notifications_theme_update_message=<strong>Authentic Theme </strong>の新しいバージョン<em>%v</em>が利用可能です。更新してください。
-theme_xhred_notifications_firewall_update=ファイアウォールの更新
-theme_xhred_notifications_firewall_update_message=<strong>ConfigServer サーバーセキュリティとファイアウォール</strong>の新しいバージョン<em>%v</em>が利用可能です。更新してください。
 
 theme_xhred_notifications_firewall_danger=ファイアウォールの危険性
 theme_xhred_notifications_firewall_danger_message=<strong>ConfigServer サーバーのセキュリティとファイアウォール</strong>が実行されて<i class="badge badge-danger">いない</i>か、または停止していることが表示されます。サーバーを公開したままにしないで、ファイアウォールの設定を確認してください(%v)

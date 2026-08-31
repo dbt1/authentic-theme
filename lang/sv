@@ -216,8 +216,6 @@ theme_xhred_filemanager_successful_compression=Komprimeringen slutfördes.
 theme_xhred_notifications_packages_updates=Paketuppdatering
 theme_xhred_notifications_theme_update=Temauppdatering
 theme_xhred_notifications_theme_update_message=En ny version <em>%v</em> av <strong>Authentic Theme</strong> finns tillgänglig. Uppdatera.
-theme_xhred_notifications_firewall_update=Brandväggsuppdatering
-theme_xhred_notifications_firewall_update_message=En ny version <em>%v</em> av <strong>ConfigServer Server Security och Firewall</strong> finns tillgänglig. Uppdatera.
 
 theme_xhred_notifications_firewall_danger=Brandväggsfara
 theme_xhred_notifications_firewall_danger_message=Det verkar som att <strong>ConfigServer Server Security och Firewall</strong> inte <i class="badge badge-danger">körs</i> eller har blivit stoppad! Lämna inte din server oskyddad, kontrollera brandväggsinställningarna (%v)

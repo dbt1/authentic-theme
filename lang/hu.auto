@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=A(z <tt>%value</tt> fájl siker
 theme_xhred_notifications_packages_updates=Csomagok frissítése
 theme_xhred_notifications_theme_update=Témafrissítés
 theme_xhred_notifications_theme_update_message=Az <strong>Authentic Theme</strong> új <em>%v</em> verziója érhető el. Kérem frissítsen.
-theme_xhred_notifications_firewall_update=Tűzfal frissítés
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Tűzfal veszély
 theme_xhred_notifications_firewall_danger_message=Úgy tűnik, hogy a <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">nem fut</i> vagy leállt! Ne hagyja kiszolgálóját szabadon, ellenőrizze a tűzfal beállításait (%v)

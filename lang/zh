@@ -215,8 +215,6 @@ theme_xhred_filemanager_successful_compression=压缩已成功完成。
 theme_xhred_notifications_packages_updates=软件包更新
 theme_xhred_notifications_theme_update=主题更新
 theme_xhred_notifications_theme_update_message=<strong>Authentic 主题</strong> <em>%v</em> 版本的更新目前可用。请更新。
-theme_xhred_notifications_firewall_update=防火墙更新
-theme_xhred_notifications_firewall_update_message=<strong>ConfigServer 服务器安全和防火墙</strong> <em>%v</em>版本的更新目前可用。请更新。
 
 theme_xhred_notifications_firewall_danger=防火墙危险
 theme_xhred_notifications_firewall_danger_message=似乎 <strong>ConfigServer 服务器安全和防火墙</strong><i class="badge badge-danger">未运行</i>或已停止！不要让您的服务器暴露在公网，请检查防火墙设置（%v）

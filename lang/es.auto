@@ -167,8 +167,6 @@ theme_xhred_filemanager_successful_file_creation=El archivo <tt>%value</tt> se c
 theme_xhred_notifications_packages_updates=Actualización de paquetes
 theme_xhred_notifications_theme_update=Actualización de tema
 theme_xhred_notifications_theme_update_message=Una nueva versión <em>%v</em> de <strong>Authentic Theme</strong> está disponible. Por favor actualice.
-theme_xhred_notifications_firewall_update=Actualización de cortafuegos
-theme_xhred_notifications_firewall_update_message=Se encuentra disponible una nueva versión <em>%v</em> de <strong>ConfigServer Server Security and Firewall</strong>. Por favor actualice.
 
 theme_xhred_notifications_firewall_danger=Peligro de cortafuegos
 theme_xhred_notifications_firewall_danger_message=¡Parece que <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">no</i> se <i class="badge badge-danger">está ejecutando</i> o se ha detenido! No deje su servidor expuesto, verifique la configuración del firewall (%v)

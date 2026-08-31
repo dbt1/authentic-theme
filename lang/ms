@@ -215,8 +215,6 @@ theme_xhred_filemanager_successful_compression=Kompresi telah berhasil.
 theme_xhred_notifications_packages_updates=Pembaruan paket
 theme_xhred_notifications_theme_update=Pembaruan Tema
 theme_xhred_notifications_theme_update_message=Versi baru <em>%v</em> dari <strong>Tema Authentic</strong> tersedia. Silakan diperbarui.
-theme_xhred_notifications_firewall_update=Pembaruan Firewall
-theme_xhred_notifications_firewall_update_message=Versi terbaru <em>%v</em> dari <strong>ConfigServer Server Security and Firewall</strong> tersedia. Silakan diperbarui.
 
 theme_xhred_notifications_firewall_danger=Firewall Berbahaya
 theme_xhred_notifications_firewall_danger_message=Sepertinya <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">tidak berjalan</i> atau telah dihentikan! Jangan biarkan server Anda terpapar, periksa pengaturan firewall (%v)

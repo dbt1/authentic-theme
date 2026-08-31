@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=Tiedoston <tt>%value</tt> luomi
 theme_xhred_notifications_packages_updates=Pakettien päivitys
 theme_xhred_notifications_theme_update=Teeman päivitys
 theme_xhred_notifications_theme_update_message=Uusi versio <em>%v</em> <strong>Authentic Theme</strong> on saatavana. Ole hyvä ja päivitä.
-theme_xhred_notifications_firewall_update=Palomuurin päivitys
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Palomuurin vaara
 theme_xhred_notifications_firewall_danger_message=Näyttää siltä, että <strong>ConfigServer Server Security and Firewall</strong> eivät <i class="badge badge-danger">ole käynnissä</i> tai on lopetettu! Älä jätä palvelinta paljastamaan, tarkista palomuuriasetukset (%v)

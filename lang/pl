@@ -242,8 +242,6 @@ theme_xhred_filemanager_successful_file_creation=Plik <tt>%value</tt> został po
 theme_xhred_notifications_packages_updates=Aktualizacje Pakietów
 theme_xhred_notifications_theme_update=Aktualizacja Motywu
 theme_xhred_notifications_theme_update_message=Dostępna jest nowa wersja <em>%v</em> motywu <strong>Authentic</strong>. Proszę zaktualizować.
-theme_xhred_notifications_firewall_update=Aktualizacja Zapory Ogniowej
-theme_xhred_notifications_firewall_update_message=Dostępna jest nowa wersja <em>%v</em> <strong>ConfigServer Server Security and Firewall</strong>. Proszę zaktualizować.
 
 theme_xhred_notifications_firewall_danger=Niebezpieczeństwo Zapory Ogniowej
 theme_xhred_notifications_firewall_danger_message=Wygląda na to, że <strong>ConfigServer Server Security and Firewall</strong> jest <i class="badge badge-danger">nieuruchomiony</i> lub został zatrzymany! Nie zostawiaj serwera bez ochrony, sprawdź ustawienia zapory ogniowej (%v)

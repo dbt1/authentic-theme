@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=تم إنشاء الملف <tt>
 theme_xhred_notifications_packages_updates=تحديث الحزم
 theme_xhred_notifications_theme_update=تحديث الموضوع
 theme_xhred_notifications_theme_update_message=يتوفر إصدار جديد <em>%v</em> من <strong>Authentic Theme</strong>. يرجى التحديث.
-theme_xhred_notifications_firewall_update=تحديث جدار الحماية
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=خطر جدار الحماية
 theme_xhred_notifications_firewall_danger_message=يبدو أن <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">لا يعمل</i> أو تم إيقافه! لا تترك الخادم الخاص بك مكشوفًا ، تحقق من إعدادات جدار الحماية (%v)

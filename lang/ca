@@ -215,8 +215,6 @@ theme_xhred_filemanager_successful_compression=La compressió ha acabat correcta
 theme_xhred_notifications_packages_updates=Actualització de paquests
 theme_xhred_notifications_theme_update=Actualització del tema
 theme_xhred_notifications_theme_update_message=S'ha trobat una nova versió (<em>%v</em>) de l'authentic-theme. Actualitza'l.
-theme_xhred_notifications_firewall_update=Actualització del tallafocs
-theme_xhred_notifications_firewall_update_message=Hi ha disponible una nova versió (<em>%v</em>) de la configuració de seguretat del servidor. Actualitza-ho.
 
 theme_xhred_notifications_firewall_danger=Perill
 theme_xhred_notifications_firewall_danger_message=Sembla que el <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">no s'està executant</i> o s'ha parat. Comprova la configuració del tallafocs (%v)

@@ -137,8 +137,6 @@ theme_xhred_filemanager_successful_file_creation=Файл <tt>%value</tt> усп
 
 theme_xhred_notifications_packages_updates=Обновление пакетов
 theme_xhred_notifications_theme_update=Обновление темы
-theme_xhred_notifications_firewall_update=Обновление брандмауэра
-theme_xhred_notifications_firewall_update_message=Новая версия <strong>ConfigServer Server Security and Firewall</strong> <em>%v</em> доступна для установки. Пожалуйста обновите.
 
 theme_xhred_notifications_firewall_danger=Опасность брандмауэра
 theme_xhred_notifications_firewall_danger_message=Похоже, что <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">не работает</i> или был остановлен! Не оставляйте сервер открытым, проверьте настройки брандмауэра (%v)

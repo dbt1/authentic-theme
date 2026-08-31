@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=Файл <tt>%value</tt> ств
 theme_xhred_notifications_packages_updates=Оновлення пакетів
 theme_xhred_notifications_theme_update=Оновлення теми
 theme_xhred_notifications_theme_update_message=Доступна нова версія <em>%v</em> <strong>Authentic Theme</strong>. Будь ласка, оновіть.
-theme_xhred_notifications_firewall_update=Оновлення брандмауера
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Небезпека брандмауера
 theme_xhred_notifications_firewall_danger_message=Здається, що <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">не запущена</i> або зупинена! Не залишайте ваш сервер відкритим, перевірте параметри брандмауера (%v)

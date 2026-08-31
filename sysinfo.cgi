@@ -60,7 +60,6 @@ my ($cpu_percent,
     $package_message,
     $csf_title,
     $csf_data,
-    $csf_remote_version,
     $authentic_remote_version
 ) = get_sysinfo_vars(\@info);
 

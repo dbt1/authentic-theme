@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=<tt>%value</tt> dosyası başar
 theme_xhred_notifications_packages_updates=Paketler Güncellemesi
 theme_xhred_notifications_theme_update=Tema Güncellemesi
 theme_xhred_notifications_theme_update_message=<strong>Authentic Theme</strong> uygulamasının <em>%v</em> yeni sürümü mevcut. Lütfen güncelle.
-theme_xhred_notifications_firewall_update=Güvenlik Duvarı Güncellemesi
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Güvenlik Duvarı Tehlikesi
 theme_xhred_notifications_firewall_danger_message=<strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">çalışmıyor</i> ya da durdurulmuş görünüyor! Sunucunuzu açıkta bırakmayın, güvenlik duvarı ayarlarını kontrol edin (%v)

@@ -246,8 +246,6 @@ theme_xhred_filemanager_successful_file_creation=Datei %value wurde erfolgreich 
 theme_xhred_notifications_packages_updates=Paketaktualisierungen
 theme_xhred_notifications_theme_update=Design-Aktualisierung
 theme_xhred_notifications_theme_update_message=Eine neue Version %v des Authentic Theme ist verfügbar. Bitte aktualisieren.
-theme_xhred_notifications_firewall_update=Firewall-Aktualisierung
-theme_xhred_notifications_firewall_update_message=Eine neue Version %v von ConfigServer Server Security and Firewall ist verfügbar. Bitte aktualisieren.
 
 theme_xhred_notifications_firewall_danger=Firewall-Gefahr
 theme_xhred_notifications_firewall_danger_message=Es scheint, dass ConfigServer Server Security and Firewall nicht läuft oder gestoppt wurde! Lassen Sie Ihren Server nicht ungeschützt – prüfen Sie die Firewall-Einstellungen (%v)

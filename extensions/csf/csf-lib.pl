@@ -7,7 +7,7 @@ use strict;
 
 use Fcntl qw( :flock );
 
-our (%gconfig, %in, $get_user_level, $current_theme, $config_directory, $theme_webprefix, %theme_text, %theme_config);
+our ($current_theme, $config_directory, $theme_webprefix, %theme_text);
 
 &webmin_user_is_admin() || &error($theme_text{'theme_error_access_dir_not_allowed'});
 
@@ -37,56 +37,13 @@ sub csf_clear
 
 sub csf_strings
 {
-
-    # Define CSF installed version
-    my $error;
-    my $csf_update_required;
     my $csf_title;
     my $csf_data;
-    my $csf_remote_version;
-    my $csf_installed_version = read_file_lines("$csf_conf/version.txt", 1);
-    $csf_installed_version = $csf_installed_version->[0];
 
-    # Define CSF actual version if allowed
-    if ($theme_config{'settings_sysinfo_csf_updates'} eq 'true' &&
-        &webmin_user_is_admin() &&
-        $in{'xhr-info'} eq '1')
-    {
-        my $cache_id = 'version-csf';
-        $csf_remote_version = theme_cache_read($cache_id);
-        my $download_server = $theme_config{'settings_csf_download_domain_privileged'};
-        # If download server is set to discontinued "download.configserver.com",
-        # update cache with existing without trying to download anything
-        if ($download_server eq 'download.configserver.com') {
-            theme_cache_write($cache_id, $csf_remote_version);    
-            $csf_remote_version = '0';   
-        } else {
-            my $download_port   = $theme_config{'settings_csf_download_port_privileged'};
-            my $download_path   = $theme_config{'settings_csf_download_path_privileged'};
-            my $ssl = ($download_port =~ /^\d+$/)
-                    ? ($download_port == 80 || $download_port == 8080 ? 0 : 1)
-                    : 0;
-            if (!$csf_remote_version ||
-                ($csf_remote_version && !theme_cache_is_fresh($cache_id))) {
-                http_download($download_server, $download_port, $download_path,
-                            \$csf_remote_version, \$error,
-                            undef, $ssl, undef, undef, 30);
-                theme_cache_write($cache_id, $csf_remote_version) if ($csf_remote_version && !$error);
-            }
-        }
-        # Trim versions' number
-        $csf_installed_version = &trim($csf_installed_version) if $csf_installed_version;
-        $csf_remote_version    = &trim($csf_remote_version) if $csf_remote_version;
-
-    } else {
-        $csf_remote_version = '0';
-    }
-
-    if ($csf_remote_version <= $csf_installed_version) {
-        $csf_update_required = '0';
-    } else {
-        $csf_update_required = '1';
-    }
+    # Read the installed CSF version for display only
+    my $csf_version_lines = read_file_lines("$csf_conf/version.txt", 1);
+    my $csf_installed_version = $csf_version_lines ? $csf_version_lines->[0] : '';
+    $csf_installed_version = &trim($csf_installed_version) if $csf_installed_version;
 
     $csf_title = $theme_text{'body_firewall'} . ' '
       .
@@ -95,18 +52,11 @@ sub csf_strings
       );
     $csf_data = (
         '<a href=\'' . $theme_webprefix . '/csf/index.cgi\' data-id="csf_link_open">' .
-          $theme_text{'theme_xhred_csf'} . '</a> ' . product_version_update($csf_installed_version, 'f') . ''
-
-          . ($csf_update_required eq '1' ?
-               '. ' . $theme_text{'theme_update_available'} . ' ' . $csf_remote_version . '&nbsp;&nbsp;&nbsp;' :
-               '&nbsp;&nbsp;&nbsp;'
-          ) .
+          $theme_text{'theme_xhred_csf'} . '</a> ' .
+          $csf_installed_version . '&nbsp;&nbsp;&nbsp;' .
           '
               <form action="/csf/index.cgi" method="post" class="hidden" id="csf_lfdstatus">
                   <input type="hidden" name="action" value="lfdstatus">
-              </form>
-              <form action="/csf/index.cgi" method="post" class="hidden" id="csf_upgrade">
-                  <input type="hidden" name="action" value="upgrade">
               </form>
               <form action="/csf/index.cgi" method="post" class="hidden" id="csf_temporary_ip_entries">
                   <input type="hidden" name="action" value="temp">
@@ -117,25 +67,8 @@ sub csf_strings
               <form action="/csf/index.cgi" method="post" class="hidden" id="csf_denyf">
                   <input type="hidden" name="action" value="denyf">
               </form>
-          '
-          . (
-            $csf_update_required eq '1' ?
-              '<div class="btn-group">
-              <a class="btn btn-xxs btn-success csf csf-submit" data-id="csf_upgrade"><i class="fa fa-fw fa-refresh">&nbsp;</i>'
-              . $theme_text{'theme_update'} . '</a>
-              <a class="btn btn-xxs btn-info csf" target="_blank" href="https://'.
-                $theme_config{'settings_csf_download_domain_privileged'}
-                .'/csf/changelog.txt"><i class="fa fa-fw fa-pencil-square-o">&nbsp;</i>'
-              . $theme_text{'theme_changelog'} . '</a>
-              <a class="btn btn-xxs btn-warning csf" target="_blank" href="https://'.
-                $theme_config{'settings_csf_download_domain_privileged'}.'/csf.tgz"><i class="fa fa-fw fa-download">&nbsp;</i>'
-              . $theme_text{'theme_download'} . '</a>
-          </div>'
-            :
-              ''
-          ) .
-          '');
-    return ($csf_title, $csf_data, $csf_remote_version);
+          ');
+    return ($csf_title, $csf_data);
 }
 
 sub csf_mod

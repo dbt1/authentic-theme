@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=فایل <tt>%value</tt> با �
 theme_xhred_notifications_packages_updates=به روزرسانی بسته ها
 theme_xhred_notifications_theme_update=بروزرسانی تم
 theme_xhred_notifications_theme_update_message=نسخه جدید <em>%v</em> از <strong>Authentic Theme</strong> در دسترس است. لطفا به روز کنید.
-theme_xhred_notifications_firewall_update=بروزرسانی فایروال
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=فایروال خطر
 theme_xhred_notifications_firewall_danger_message=به نظر می رسد که <strong>ConfigServer Server Security and Firewall</strong> در <i class="badge badge-danger">حال اجرا نیست</i> یا متوقف شده است! سرور خود را در معرض قرار ندهید ، تنظیمات فایروال را بررسی کنید (%v)

@@ -216,8 +216,6 @@ theme_xhred_filemanager_successful_compression=La compressione è terminata corr
 theme_xhred_notifications_packages_updates=Aggiornamento pacchetti
 theme_xhred_notifications_theme_update=Aggiornamento tema
 theme_xhred_notifications_theme_update_message=Una nuova versione <em>%v</em> di <strong>Authentic Theme</strong> è disponibile. Perfavore aggiorna.
-theme_xhred_notifications_firewall_update=Aggiornamento firewall
-theme_xhred_notifications_firewall_update_message=Una nuova versione <em>%v</em> di <strong>ConfigServer Server Security e Firewall</strong> è disponibile. Perfavore aggiorna.
 
 theme_xhred_notifications_firewall_danger=Pericolo Firewall
 theme_xhred_notifications_firewall_danger_message=Sembra che <strong>ConfigServer Server Security e Firewall</strong> <i class="badge badge-danger">non sia in esecuzione</i> o è stato arrestato! Non lasciare il server esposto, controlla le impostazioni del firewall (%v)

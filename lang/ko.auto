@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=<tt>%value</tt> 파일이 성�
 theme_xhred_notifications_packages_updates=패키지 업데이트
 theme_xhred_notifications_theme_update=테마 업데이트
 theme_xhred_notifications_theme_update_message=<strong>Authentic Theme</strong> 의 새로운 버전 <em>%v</em> 를 사용할 수 있습니다. 업데이트하십시오.
-theme_xhred_notifications_firewall_update=방화벽 업데이트
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=방화벽 위험
 theme_xhred_notifications_firewall_danger_message=<strong>ConfigServer Server Security and Firewall</strong> 이 <i class="badge badge-danger">실행 중이 아니</i> 거나 중지 된 것 같습니다! 서버를 노출시키지 말고 방화벽 설정 (%v)을 확인하십시오.

@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=文件<tt>%value</tt>已成功�
 theme_xhred_notifications_packages_updates=套餐更新
 theme_xhred_notifications_theme_update=主題更新
 theme_xhred_notifications_theme_update_message=提供了一個新版本的<strong>Authentic Theme</strong> <em>%v</em> 。請更新。
-theme_xhred_notifications_firewall_update=防火牆更新
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=防火牆危險
 theme_xhred_notifications_firewall_danger_message=似乎<strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">未運行</i>或已停止！不要讓服務器暴露在外，請檢查防火牆設置（%v ）

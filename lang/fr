@@ -215,8 +215,6 @@ theme_xhred_filemanager_successful_compression=La compression est terminée avec
 theme_xhred_notifications_packages_updates=Mise à jour des packages
 theme_xhred_notifications_theme_update=Mise à jour du thème
 theme_xhred_notifications_theme_update_message=Une nouvelle version <em>%v</em> de <strong>Thème authentique</strong> est disponible. Veuillez mettre à jour.
-theme_xhred_notifications_firewall_update=Mise à jour du pare-feu
-theme_xhred_notifications_firewall_update_message=Une nouvelle version <em>%v</em> de <strong>ConfigServer Server Security and Firewall</strong> est disponible. Veuillez mettre à jour.
 
 theme_xhred_notifications_firewall_danger=Pare-feu Danger
 theme_xhred_notifications_firewall_danger_message=Il semble que <strong>ConfigServer Server Security and Firewall</strong> soit <i class ="badge badge-danger">ne fonctionne pas</i> ou a été arrêté! Ne laissez pas votre serveur exposé, vérifiez les paramètres du pare-feu (%v)

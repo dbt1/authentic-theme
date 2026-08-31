@@ -477,19 +477,8 @@ sub product_version_update_remote
     my $software_latest_cache       = theme_cache_read($cache_id);
     $software_latest_cache = undef if (ref($software_latest_cache) ne 'HASH');
 
-    # Also get extra package versions not in repos if available
-    my $software_latest_cache_extra = sub {
-        my ($base) = @_;
-        my %out = $base ? %{$base} : ();
-        # Get CSF version if available
-        my $csf = theme_cache_read('version-csf-stable');
-        $out{csf} = $csf if ($csf);
-        # Return results
-        return \%out;
-    };
-
     # Return cached versions if cache is fresh
-    return $software_latest_cache_extra->($software_latest_cache)
+    return $software_latest_cache
         if ($software_latest_cache && theme_cache_is_fresh($cache_id));
 
     # No cache or stale cache, get new versions
@@ -512,7 +501,7 @@ sub product_version_update_remote
         }
     }
     theme_cache_write($cache_id, \%versions_available);
-    return $software_latest_cache_extra->(\%versions_available);
+    return \%versions_available;
 }
 
 sub product_version_update
@@ -536,7 +525,6 @@ sub product_version_update
       $product_local_name eq "u" ? ["Usermin",                          $software_versions_remote->{'usermin'}] :
       $product_local_name eq "v" ? ["Virtualmin",                       $software_versions_remote->{'virtual-server'}] :
       $product_local_name eq "c" ? ["Cloudmin",                         $software_versions_remote->{'server-manager'}] :
-      $product_local_name eq "f" ? ["ConfigServer Security & Firewall", $software_versions_remote->{'csf'}] :
       "";
 
     # A work-around to fix inconsistency returned by `module.info` (i.e. 7.3.gpl)
@@ -567,10 +555,7 @@ sub product_version_update
             &compare_version_numbers($product_local_version, $software_versions_remote->{'virtual-server'}) < 0) ||
         ($product_local_name eq "c" &&
             $product_local_version &&
-            &compare_version_numbers($product_local_version, $software_versions_remote->{'server-manager'}) < 0) ||
-        ($product_local_name eq "f" &&
-            $product_local_version &&
-            &compare_version_numbers($product_local_version, $software_versions_remote->{'csf'}) < 0)) {
+            &compare_version_numbers($product_local_version, $software_versions_remote->{'server-manager'}) < 0)) {
         if (&foreign_available("virtual-server")) {
             return '<a href="https://forum.virtualmin.com/search?q=' .
               $product_remote_version->[0] . '%20in%3Atitle%20%23news%20order%3Alatest" target="_blank">' .

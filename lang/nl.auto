@@ -144,8 +144,6 @@ theme_xhred_filemanager_successful_file_creation=Bestand <tt>%value</tt> is succ
 theme_xhred_notifications_packages_updates=Pakketten bijwerken
 theme_xhred_notifications_theme_update=Thema-update
 theme_xhred_notifications_theme_update_message=Er is een nieuwe versie <em>%v</em> van <strong>Authentic Theme</strong> beschikbaar. Update alstublieft.
-theme_xhred_notifications_firewall_update=Firewall-update
-theme_xhred_notifications_firewall_update_message=Er is een nieuwe versie <em>%v</em> van <strong>ConfigServer Server Security and Firewall</strong> beschikbaar. Update alstublieft.
 
 theme_xhred_notifications_firewall_danger=Firewallgevaar
 theme_xhred_notifications_firewall_danger_message=Het lijkt erop dat <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">niet actief is</i> of is gestopt! Laat uw server niet zichtbaar, controleer de firewall-instellingen (%v)

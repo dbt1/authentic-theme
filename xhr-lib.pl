@@ -899,7 +899,7 @@ if (post_has('xhr-')) {
 			$load, $real_memory,
 			$virtual_memory, $disk_space,
 			$package_message, $csf_title,
-			$csf_data, $csf_remote_version,
+			$csf_data,
 			$authentic_remote_version, $local_motd
 		) = get_sysinfo_vars(\@info);
 
@@ -933,7 +933,6 @@ if (post_has('xhr-')) {
 			"local_motd" => $local_motd,
 			"csf_title" => $csf_title,
 			"csf_data" => $csf_data,
-			"csf_remote_version" => $csf_remote_version,
 			"csf_deny" => (
 				(
 					defined(&csf_temporary_list) &&

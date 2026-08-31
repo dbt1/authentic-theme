@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=O arquivo <tt>%value</tt> foi c
 theme_xhred_notifications_packages_updates=Atualização de Pacotes
 theme_xhred_notifications_theme_update=Atualização do Tema
 theme_xhred_notifications_theme_update_message=Uma nova versão <em>%v</em> do <strong>Authentic Theme</strong> está disponível. Por favor atualize.
-theme_xhred_notifications_firewall_update=Atualização de Firewall
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Perigo do firewall
 theme_xhred_notifications_firewall_danger_message=Parece que o <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">não</i> está <i class="badge badge-danger">sendo executado</i> ou foi parado! Não deixe seu servidor exposto, verifique as configurações do firewall (%v)

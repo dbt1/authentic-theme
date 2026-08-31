@@ -253,8 +253,6 @@ theme_xhred_filemanager_successful_file_creation=Файлът <tt>%value</tt> е
 theme_xhred_notifications_packages_updates=Актуализация на пакетите
 theme_xhred_notifications_theme_update=Актуализация на темата
 theme_xhred_notifications_theme_update_message=Налична е нова версия <em>%v</em> на <strong>Authentic Theme</strong>. Моля обновете.
-theme_xhred_notifications_firewall_update=Актуализация на защитната стена
-theme_xhred_notifications_firewall_update_message=A new version <em>%v</em> of <strong>ConfigServer Server Security and Firewall</strong> is available. Please update.
 
 theme_xhred_notifications_firewall_danger=Опасност от защитна стена
 theme_xhred_notifications_firewall_danger_message=Изглежда, че <strong>ConfigServer Server Security and Firewall</strong> <i class="badge badge-danger">не се изпълняват</i> или са спрени! Не оставяйте сървъра си изложен, проверете настройките на защитната стена (%v)
