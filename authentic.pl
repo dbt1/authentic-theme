@@ -481,10 +481,13 @@ sub theme_ui_columns_start
     my ($heads, $width, $noborder, $tdtags, $title, $sortable) = @_;
     my ($rv, $i);
 
+    # Sortable tables carry both the class this theme keys on and the
+    # data-sortable attribute the core library emits, so either works
+    my $sortable_attr = $sortable ? ' data-sortable="1"' : '';
     $sortable = ' dtable-sortable' if ($sortable);
     my $width_;
     $width_ = ' w-auto-force" ' if ($width eq 'auto');
-    $rv .= "<table class=\"table table-striped table-hover table-condensed$sortable$width_\">" . "\n";
+    $rv .= "<table class=\"table table-striped table-hover table-condensed$sortable$width_\"$sortable_attr>" . "\n";
     if ($title) {
         $rv .= "<caption>$title</caption>\n";
     }
@@ -557,6 +560,15 @@ sub theme_ui_help
     $title = &html_escape(&html_strip($title), 1);
     return (
 "<sup class=\"ui_help\" data-container=\"body\" data-placement=\"auto right\" data-title=\"$title\" data-toggle=\"tooltip\"><i class=\"fa fa-question-circle cursor-help ui_help_icon\"></i></sup>"
+    );
+}
+
+sub theme_ui_tip
+{
+    my ($content, $tip) = @_;
+    $tip = &html_escape(&html_strip($tip), 1);
+    return (
+"<span class=\"ui_tip\" data-container=\"body\" data-title=\"$tip\" data-toggle=\"tooltip\">$content</span>"
     );
 }
 
